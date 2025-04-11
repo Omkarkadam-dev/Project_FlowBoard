@@ -55,4 +55,30 @@ document.addEventListener("DOMContentLoaded", () => {
   
     featureCards.forEach(card => observer.observe(card));
   });
+
+  
+  // Scroll reveal for preview cards
+document.addEventListener("DOMContentLoaded", () => {
+    const previewCards = document.querySelectorAll(".preview-card");
+  
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+  
+    previewCards.forEach(card => observer.observe(card));
+  });
+  
+  // VanillaTilt init
+  VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+    speed: 400,
+    glare: true,
+    "max-glare": 0.2,
+  });
   
