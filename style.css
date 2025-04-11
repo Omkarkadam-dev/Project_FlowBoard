@@ -1,0 +1,58 @@
+body {
+    font-family: 'Manrope', sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+  }
+  
+  .hero-bg {
+    background: radial-gradient(circle at top left, rgba(255,255,255,0.05), transparent 70%);
+  }
+  
+  .btn-glow:hover {
+    box-shadow: 0 0 25px rgba(99, 102, 241, 0.5);
+  }
+  
+  .typing::after {
+    content: '|';
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+  }
+  
+  /* Fade animations */
+  .animate-fade-in-down {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInDown 0.8s forwards;
+  }
+  
+  .animate-fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+  }
+  
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+  .delay-500 {
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes fadeInDown {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
