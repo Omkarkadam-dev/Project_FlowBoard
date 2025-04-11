@@ -117,4 +117,23 @@ document.addEventListener("DOMContentLoaded", () => {
   
     testimonials.forEach(t => observer.observe(t));
   });
+
+  
+  // Scroll reveal for Use Cases
+document.addEventListener("DOMContentLoaded", () => {
+    const cases = document.querySelectorAll("[data-case]");
+  
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+  
+    cases.forEach(c => observer.observe(c));
+  });
   

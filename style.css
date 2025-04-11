@@ -174,4 +174,49 @@ body {
   .delay-2 {
     transition-delay: 0.4s;
   }
+
+  .glassy-case {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    transform: translateY(30px);
+    opacity: 0;
+    transition: transform 0.7s ease, opacity 0.7s ease;
+    cursor: default;
+  }
+  
+  .glassy-case.reveal {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .glassy-case:hover {
+    transform: scale(1.03);
+    background: rgba(255, 255, 255, 0.08);
+  }
+  
+  .icon {
+    font-size: 2.5rem;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    margin: 0 auto;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .delay {
+    transition-delay: 0.15s;
+  }
+  .delay-2 {
+    transition-delay: 0.3s;
+  }
+  .delay-3 {
+    transition-delay: 0.45s;
+  }
   
