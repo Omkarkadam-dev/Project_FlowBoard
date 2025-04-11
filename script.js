@@ -155,3 +155,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     techItems.forEach(item => observer.observe(item));
 });
+
+
+// Scroll reveal for CTA
+document.addEventListener("DOMContentLoaded", () => {
+    const ctaSection = document.querySelector("[data-cta]");
+  
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+  
+    observer.observe(ctaSection);
+  });
+  

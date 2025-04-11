@@ -279,3 +279,26 @@ body {
 .delay-5 {
     transition-delay: 0.5s;
 }
+
+.glass-cta {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 0.8s ease, opacity 0.8s ease;
+  }
+  
+  .glass-cta.reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .scale-cta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(168, 85, 247, 0.6);
+  }
+  
