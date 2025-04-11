@@ -99,4 +99,22 @@ document.addEventListener("DOMContentLoaded", () => {
   
     steps.forEach(step => observer.observe(step));
   });
+
+  // Scroll reveal for Testimonials
+document.addEventListener("DOMContentLoaded", () => {
+    const testimonials = document.querySelectorAll("[data-testimonial]");
+  
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+  
+    testimonials.forEach(t => observer.observe(t));
+  });
   

@@ -142,4 +142,36 @@ body {
   .delay-2 {
     transition-delay: 0.4s;
   }
+
+  .glass-testimonial {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: transform 0.7s ease, opacity 0.7s ease;
+    height: 100%;
+  }
+  
+  .glass-testimonial.reveal {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .stars {
+    font-size: 1.2rem;
+    color: #facc15;
+  }
+  
+  .delay {
+    transition-delay: 0.2s;
+  }
+  .delay-2 {
+    transition-delay: 0.4s;
+  }
   
