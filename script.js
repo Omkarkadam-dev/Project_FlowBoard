@@ -81,4 +81,22 @@ document.addEventListener("DOMContentLoaded", () => {
     glare: true,
     "max-glare": 0.2,
   });
+
+  // Scroll reveal for How It Works section
+document.addEventListener("DOMContentLoaded", () => {
+    const steps = document.querySelectorAll("[data-step]");
+  
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+  
+    steps.forEach(step => observer.observe(step));
+  });
   
