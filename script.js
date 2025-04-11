@@ -172,4 +172,21 @@ document.addEventListener("DOMContentLoaded", () => {
   
     observer.observe(ctaSection);
   });
+
+  
+  // Scroll reveal for footer
+document.addEventListener("DOMContentLoaded", () => {
+    const footer = document.querySelector("[data-footer]");
+  
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          footer.classList.add("animate-fade-in");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+  
+    observer.observe(footer);
+  });
   
